@@ -10,11 +10,11 @@ html , body{
 }
 
 body {
-    background-color: #001edd;
+    background-color: #385669;
 }
 
 #app {
-    background-color: #fff;
+    background-color: rgb(133, 158, 182);
     padding: 30px;
     width: 90%;
     max-width: 600px;
@@ -32,6 +32,7 @@ body {
 
 #quiz {
     padding: 20px 0;
+
 }
 
 #quiz h2 {

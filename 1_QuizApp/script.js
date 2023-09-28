@@ -1,34 +1,112 @@
+// const questions = [
+//     {
+//         question: "Whick is largest animal in the world?",
+//         answers: [
+//             { text: "Shark", correct: false},
+//             { text: "Blue whale", correct: true},
+//             { text: "Elephant", correct: false},
+//             { text: "Giraffe", correct: false},
+//         ]
+//     }, 
+
+//     {
+//         question:"Which is the smallest continent in the world? ",
+//         answers: [
+//             { text: "Asia", correct: false},
+//             { text: "Australia", correct: true},
+//             { text: "Arctic", correct: false},
+//             { text: "Africa", correct: false},
+//         ]
+//     }, 
+
+//     {
+//         question: "Capital of India?",
+//         answers: [
+//             { text: "Delhi", correct: true},
+//             { text: "Mumbai", correct: false},
+//             { text: "UP", correct: false},
+//             { text: "MP", correct: false},
+//         ]
+//     },
+// ]
+
 const questions = [
     {
-        question: "Whick is largest animal in the world?",
+        question: "What is the role of HTML in web development?",
         answers: [
-            { text: "Shark", correct: false},
-            { text: "Blue whale", correct: true},
-            { text: "Elephant", correct: false},
-            { text: "Giraffe", correct: false},
+            { text: "Handling server-side logic", correct: false },
+            { text: "Styling web pages", correct: false },
+            { text: "Defining the structure and content of web pages", correct: true },
+            { text: "Managing databases", correct: false },
         ]
     }, 
 
     {
-        question:"Which is the smallest continent in the world? ",
+        question: "Which programming language is commonly used for building the front-end of web applications?",
         answers: [
-            { text: "Asia", correct: false},
-            { text: "Australia", correct: true},
-            { text: "Arctic", correct: false},
-            { text: "Africa", correct: false},
+            { text: "Java", correct: false },
+            { text: "Python", correct: false },
+            { text: "JavaScript", correct: true },
+            { text: "Ruby", correct: false },
         ]
     }, 
 
     {
-        question: "Capital of India?",
+        question: "What is the purpose of a CSS preprocessor like SASS or LESS in web development?",
         answers: [
-            { text: "Delhi", correct: true},
-            { text: "Mumbai", correct: false},
-            { text: "UP", correct: false},
-            { text: "MP", correct: false},
+            { text: "Handling server-side logic", correct: false },
+            { text: "Styling web pages", correct: true },
+            { text: "Defining the structure and content of web pages", correct: false },
+            { text: "Managing databases", correct: false },
         ]
     },
-]
+    {
+        question: "Which database technology is often used in the back-end of web applications?",
+        answers: [
+            { text: "NoSQL databases", correct: true },
+            { text: "Front-end frameworks", correct: false },
+            { text: "JavaScript libraries", correct: false },
+            { text: "CSS frameworks", correct: false },
+        ]
+    },
+    {
+        question: "What does 'HTTP' stand for in the context of web development?",
+        answers: [
+            { text: "Hypertext Transfer Protocol", correct: true },
+            { text: "High-Performance Technology Transfer Protocol", correct: false },
+            { text: "Hyperlink Text Transfer Process", correct: false },
+            { text: "Hyperspace Transfer Protocol", correct: false },
+        ]
+    },
+    {
+        question: "What is the purpose of a front-end framework like React or Angular in web development?",
+        answers: [
+            { text: "Storing and managing data", correct: false },
+            { text: "Creating user interfaces and handling user interactions", correct: true },
+            { text: "Defining server-side routes", correct: false },
+            { text: "Optimizing database queries", correct: false },
+        ]
+    },
+    {
+        question: "What is 'REST' in the context of web services?",
+        answers: [
+            { text: "Representational State Transfer; a set of architectural principles for designing networked applications", correct: true },
+            { text: "Remote Execution and State Transfer; a protocol for remote procedure calls", correct: false },
+            { text: "Resourceful State Transfer; a database management technique", correct: false },
+            { text: "Responsive Server Technology; a front-end development framework", correct: false },
+        ]
+    },
+    {
+        question: "What is the purpose of a back-end framework like Express.js or Ruby on Rails in web development?",
+        answers: [
+            { text: "Rendering web pages in the browser", correct: false },
+            { text: "Creating user interfaces", correct: false },
+            { text: "Handling server-side logic, routing, and database interactions", correct: true },
+            { text: "Managing front-end assets", correct: false },
+        ]
+    },
+];
+
 
 const questionElement = document.getElementById('question');
 const answerBtn = document.getElementById('answerButtons');
