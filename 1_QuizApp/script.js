@@ -21,22 +21,13 @@ const questions = [
 
     {
         question: "Capital of India?",
-        ansers: [
+        answers: [
             { text: "Delhi", correct: true},
             { text: "Mumbai", correct: false},
             { text: "UP", correct: false},
             { text: "MP", correct: false},
         ]
     },
-    {
-        question: "Capital of India?",
-        ansers: [
-            { text: "Delhi", correct: true},
-            { text: "Mumbai", correct: false},
-            { text: "UP", correct: false},
-            { text: "MP", correct: false},
-        ]
-    }
 ]
 
 const questionElement = document.getElementById('question');
