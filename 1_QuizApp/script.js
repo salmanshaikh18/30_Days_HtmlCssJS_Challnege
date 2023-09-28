@@ -34,29 +34,62 @@ const questionElement = document.getElementById('question');
 const answerBtn = document.getElementById('answerButtons');
 const nextBtn = document.getElementById('nextBtn');
 
-let currentQuestionIndex = 0;
+// let currentQuestionIndex = 0;
 
+// let score = 0;
+
+// function startQuiz() {
+//     currentQuestionIndex = 0;
+//     score: 0;
+//     nextBtn.innerHTML = "Next";
+//     showQuestion();
+// }
+
+// const showQuestion = () => {
+//     let currentQuestion = questions[currentQuestionIndex]
+//     console.log(currentQuestion)
+//     let questionNo = currentQuestionIndex + 1;
+//     questionElement.innerHtml = questionNo + ". " + currentQuestion.question;
+
+//     currentQuestion.answers.forEach((answer) => {
+//         const button = document.createElement('button');
+//         button.innerHTML = answer.text;
+//         button.classList.add("btn")
+//         answerBtn.appendChild(button)
+//     })
+// }
+
+// startQuiz()
+
+let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz() {
+const startQuiz = () => {
     currentQuestionIndex = 0;
-    score: 0;
-    nextBtn.innerHTML = "Next";
+    score = 0;
+    nextBtn.innerHTML = "Next"
     showQuestion();
 }
 
 const showQuestion = () => {
-    let currentQuestion = questions[currentQuestionIndex]
-    console.log(currentQuestion)
-    let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHtml = questionNo + ". " + currentQuestion.question;
+    resetState()
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNum = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNum + ". " + currentQuestion.question;
 
-    currentQuestion.answers.forEach((answer) => {
+    currentQuestion.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerHTML = answer.text;
-        button.classList.add("btn")
+        button.classList.add('btn');
         answerBtn.appendChild(button)
     })
+}
+
+const resetState = () => {
+    nextBtn.style.display = 'none';
+    while(answerBtn.firstChild) {
+       answerBtn.removeChild(answerBtn.firstChild)
+    }
 }
 
 startQuiz()
