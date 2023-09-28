@@ -25,7 +25,16 @@ const questions = [
             { text: "Delhi", correct: true},
             { text: "Mumbai", correct: false},
             { text: "UP", correct: false},
-            { text: "MP", correct: false}
+            { text: "MP", correct: false},
+        ]
+    },
+    {
+        question: "Capital of India?",
+        ansers: [
+            { text: "Delhi", correct: true},
+            { text: "Mumbai", correct: false},
+            { text: "UP", correct: false},
+            { text: "MP", correct: false},
         ]
     }
 ]
@@ -74,6 +83,7 @@ const selectAnswer = (e) => {
     const isCorrect = selectedBtn.dataset.correct === 'true';
     if (isCorrect) {
         selectedBtn.classList.add('correct');
+        score++;
     } else {
         selectedBtn.classList.add('incorrect');
     }
@@ -83,6 +93,30 @@ const selectAnswer = (e) => {
         }
         button.disabled = true;
     })
+    nextBtn.style.display = 'block';
 }
+
+const showScore = () => {
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextBtn.innerHTML = 'Play Again';
+    nextBtn.style.display = 'block';
+}
+
+const handleNextButton = () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showScore();
+    }
+}
+nextBtn.addEventListener('click', () => {
+    if ( currentQuestionIndex < questions.length) {
+        handleNextButton()
+    } else {
+        startQuiz()
+    }
+})
 
 startQuiz()
