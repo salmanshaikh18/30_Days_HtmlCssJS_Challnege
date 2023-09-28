@@ -76,3 +76,11 @@ body {
 #nextBtn:hover {
     background-color: #001edd;
 }
+
+.correct {
+    background: #9aeabc;
+}
+
+.incorrect {
+    background-color: #ff9393;
+}
